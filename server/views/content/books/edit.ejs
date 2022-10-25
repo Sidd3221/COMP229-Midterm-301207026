@@ -5,6 +5,12 @@
 
             <form class="form" method="POST">
                 <div class="form-group">
+                    <input type="text" class="form-control"
+                    name="id"
+                    value="<%= book._id %>"
+                    required>
+                </div>
+                <div class="form-group">
                     <label for="nameTextField">Book Title</label>
                     <input type="text" class="form-control"
                     id="nameTextField"
