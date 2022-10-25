@@ -17,9 +17,6 @@ export function displayBookList(req, res, next) {
 //  GET the Book Details page in order to add a new Book
 export function displayAddPage(req, res, next) {
     res.render('index', { title: 'Add a Book', page: 'books/add', books: {}});
-
-    // Try the code below if there is any error while adding a book
-    //res.render('index', { title: 'Add a Book', page: 'books/add', books: {}});
 }
 
 // POST process the Book Details page and create a new Book - CREATE
