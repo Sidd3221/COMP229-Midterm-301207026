@@ -1,3 +1,9 @@
+// Filename: books.js
+// Student Name: Siddharth Verma
+// Student ID: 301207026
+// Date: Oct 24, 2022
+
+
 // define the book model
 import books from '../models/books.js';
 import booksModel from '../models/books.js';
@@ -14,12 +20,12 @@ export function displayBookList(req, res, next) {
     });
 }
 
-//  GET the Book Details page in order to add a new Book
+//  Display/render the page where the user can add a book to the database
 export function displayAddPage(req, res, next) {
     res.render('index', { title: 'Add a Book', page: 'books/add', books: {}});
 }
 
-// POST process the Book Details page and create a new Book - CREATE
+// Process the user's request to add a book to the database
 export function processAddPage(req, res, next) {
     let newBook = booksModel({
         ...req.body
@@ -37,7 +43,7 @@ export function processAddPage(req, res, next) {
     })
 }
 
-// GET the Book Details page in order to edit an existing Book
+// Display/render the page where the user can edit a book already in the database
 export function displayEditPage(req, res, next) {
     let id = req.params.id;
     
@@ -53,7 +59,7 @@ export function displayEditPage(req, res, next) {
     })
 }
 
-// POST - process the information passed from the details form and update the document
+// Process the user's request to edit a book in the database
 export function processEditPage(req, res, next) {
     let id = req.params.id;
     
@@ -74,7 +80,7 @@ export function processEditPage(req, res, next) {
     })
 }
 
-// GET - process the delete by user id
+// Process the user's request to delete a book in the database
 export function processDelete(req, res, next) {
     let id = req.params.id;
 

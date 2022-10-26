@@ -1,7 +1,7 @@
 // Filename: config.js
 // Student Name: Siddharth Verma
 // Student ID: 301207026
-// Date: October 1, 2022
+// Date: Oct 24, 2022
 
 export const Secret = "someSecret";
 
