@@ -1,6 +1,7 @@
 // Filename: config.js
-// Student Name: Siddharth Verma
+// Author Name: Siddharth Verma
 // Student ID: 301207026
+// Web App Name: Book Collection (COMP229 Midterm)
 // Date: Oct 24, 2022
 
 export const Secret = "someSecret";

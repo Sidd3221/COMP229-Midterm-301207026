@@ -1,6 +1,7 @@
 // Filename: books.js
-// Student Name: Siddharth Verma
+// Author Name: Siddharth Verma
 // Student ID: 301207026
+// Web App Name: Book Collection (COMP229 Midterm)
 // Date: Oct 24, 2022
 
 
@@ -43,7 +44,7 @@ export function processAddPage(req, res, next) {
     })
 }
 
-// Display/render the page where the user can edit a book already in the database
+// Display/render the page where the user can edit/update a book already in the database
 export function displayEditPage(req, res, next) {
     let id = req.params.id;
     
@@ -54,12 +55,12 @@ export function displayEditPage(req, res, next) {
         }
         
         else{
-            res.render('index', { title: 'Edit book', page: 'books/edit', book: book});
+            res.render('index', { title: 'Edit Book Details', page: 'books/edit', book: book});
         }
     })
 }
 
-// Process the user's request to edit a book in the database
+// Process the user's request to edit/update a book in the database
 export function processEditPage(req, res, next) {
     let id = req.params.id;
     
